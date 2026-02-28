@@ -1,0 +1,78 @@
+// @format
+
+// variables
+@nav-color: #F3A821;
+@footer-bg: #F5F5F5;
+@content-bg: #BEBEBE;
+@border-color: black;
+// @base-unit: 10px;
+@red-color: red;
+@blue-color: blue;
+@green-color: green;
+@purple-color: purple;
+
+
+// global styles
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+    background-color: @content-bg;
+}
+
+
+// main
+main {
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 450px;
+}
+
+
+// nav
+nav {
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    padding: 15px;
+    background-color: @nav-color;
+}
+
+
+// footer
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: @footer-bg;
+}
+
+
+// boxes
+.box(@color, @size) {
+    width: @size;
+    height: @size;
+    border-radius: 8px;
+    border: solid @border-color 2px;
+    background-color: @color;
+}
+
+
+// styling of individual boxes called in html file
+.red-box {
+    .box(@red-color, 100px);
+}
+
+.blue-box {
+    .box(@blue-color, 200px);
+}
+
+.green-box {
+    .box(@green-color, 250px);
+}
+
+.purple-box {
+    .box(@purple-color, 50px);
+}
